@@ -7,7 +7,7 @@ class Program
         // variables
         string? nombreEmpleado = "";
         int horasTrabajadas = 0;
-        decimal pagoHorasTrabajadas = 0m;
+        decimal pagoPorHorasTrabajadas = 0m;
         
         
         Console.WriteLine("\t********** CALCULADOR DE HORAS TRABAJADAS **********");
@@ -19,9 +19,22 @@ class Program
         horasTrabajadas = int.Parse(Console.ReadLine()); // registra total de horas trabajadas
         
         Console.WriteLine("\nInserte el monto de pago por hora: ");
-        pagoHorasTrabajadas = decimal.Parse(Console.ReadLine()); // registra precio de horas
+        pagoPorHorasTrabajadas = decimal.Parse(Console.ReadLine()); // registra precio de horas
         
-        Console.WriteLine("\n \t********** Su salario acumulado hasta el momento es: **********");
+      
+        
+        
+        Console.WriteLine("*****************************************************");
+        Console.WriteLine("\n \tTARJETA DE EMPLEADO");
+        
+        Console.WriteLine($"\nNombre: {nombreEmpleado}");
+        
+        Console.WriteLine($"Salario: $RD{horasTrabajadas *  pagoPorHorasTrabajadas:N1}");
+        
+        Console.WriteLine("\n*****************************************************");
+        
+        Console.WriteLine("\nProceso Terminado.");
+        
         
         
 
